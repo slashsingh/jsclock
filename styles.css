@@ -28,11 +28,12 @@
 	transform: translate(-50%, -50%);
 }
 
-.hour, .minute, .second, .clock-center {
+.hour, .minute, .second, .alarm, .clock-center {
 	position: absolute;
 	display: inline-block;
 	bottom: 50%;
 	transform-origin: center 100%;
+	transition: transform .7s ease-in-out;
 }
 
 .clock-center {
@@ -62,6 +63,11 @@
 	width: 0px;
 	height: 110px;
 }
+.alarm {
+	border: 2px solid orange;
+	width: 0px;
+	height: 85px;	
+}
 .clock-char {
 	position: absolute;
 	left: 47.6%;
@@ -83,4 +89,7 @@
 	top: 47%;
 	left: 50px;
 	box-shadow: inset 4px 4px 12px 0px rgba(50, 50, 50, 0.75);
+}
+.notransition {
+	transition: none;
 }
