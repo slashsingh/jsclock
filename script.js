@@ -4,6 +4,7 @@ for(var i = 0; i < char.length; i++) {
 	char[i].firstChild.style.transform = 'rotate('+(-i*360/12)+'deg)';
 	char[i].style.transform = 'rotate('+(i*(360/12))+'deg)';
 }
+
 function updateClock() {
 	var d = new Date();
 	var s = d.getSeconds();
@@ -24,3 +25,8 @@ function updateClock() {
 														<span class='show'>:</span>
 														<span>${sd}</span>`;
 }
+setTimeout(function(){
+	document.querySelector('.second').classList.add('notransition');
+	document.querySelector('.minute').classList.add('notransition');
+	document.querySelector('.hour').classList.add('notransition');
+}, 2000);
